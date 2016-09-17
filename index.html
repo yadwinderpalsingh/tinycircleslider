@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Carousel</title>
+    <link rel="stylesheet" href="/css/tinycircleslider.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+    <!-- build:js jquery.tinycircleslider.js -->
+    <script type="text/javascript" src="/js/jquery.tinycircleslider.js"></script>
+    <script type="text/javascript" src="/js/plugins.js"></script>
+    <script type="text/javascript" src="/js/circletype.js"></script>
+    <!-- /build -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var widthtoacquire = $(window).width() - 30;
+            var radius = (widthtoacquire - 90) / 2 > 200 ? 200 : (widthtoacquire - 90) / 2;
+            $("#rotatescroll").css({
+                width: widthtoacquire - 90
+            });
+            $(".viewport, .overview li").css({
+                width: widthtoacquire - 90,
+                height: widthtoacquire - 90
+            });
+            $("#rotatescroll").tinycircleslider({
+                dotsSnap: true,
+                radius: radius,
+                dotsHide: false,
+                slides: ["Central", "My Channel", "TV Shows", "Movies", "Deals", "Friends", "Trending", "Channels"],
+                interval: false
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="rotateframe">
+        <div id="rotatescroll">
+            <div class="viewport">
+                <div class="dot"></div>
+                <ul class="overview">
+                    <li>
+                        <a href="javascript:void()"><img class="img-responsive" src="images/client-1.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()"><img class="img-responsive" src="images/client-2.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()"><img class="img-responsive" src="images/client-3.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()"><img class="img-responsive" src="images/client-4.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()"><img class="img-responsive" src="images/profile-img.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()"><img class="img-responsive" src="images/client-1.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()"><img class="img-responsive" src="images/client-2.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()"><img class="img-responsive" src="images/client-3.jpg" /></a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="thumb"></div>
+        </div>
+    </div>
+</body>
+
+</html>
